@@ -389,7 +389,7 @@ public final class Timber {
   public static abstract class Tree {
     final ThreadLocal<String> explicitTag = new ThreadLocal<>();
 
-    String getTag() {
+    protected String getTag() {
       String tag = explicitTag.get();
       if (tag != null) {
         explicitTag.remove();
